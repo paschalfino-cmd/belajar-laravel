@@ -1,0 +1,30 @@
+header h1 {
+    text-align: center;
+    background-color: pink;
+    color: white;
+    padding: 30px;
+}
+
+ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background-color: pink;
+    opacity: 0.5;
+    gap: 20px;
+    padding: 10px;
+}
+
+ul li {
+    padding: 5px 15px;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    background-color: pink;
+    color: white;
+}
+
