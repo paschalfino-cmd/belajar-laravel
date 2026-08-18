@@ -45,7 +45,31 @@ Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
     }
 
     //create
-    public function create() {}
+    public function create() {
+        return view('pages.tambah-artikel');
+    }
+
+    //store
+     public function store(Request $request) {
+
+    $artikel = [
+
+      'judul' => $request->input('judul'),
+
+      'penulis' => $request->input('penulis'),
+
+      'tanggal_publikasi' => $request->input('tanggal_publikasi'),
+
+      'kategori' => $request->input('kategori'),
+
+      'isi' => $request->input('isi')
+
+    ];
+
+
+    return view('pages.hasil-artikel', ['artikel' => $artikel]);
+
+  }
 
     //read
     public function show($id) {
@@ -67,5 +91,26 @@ Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
 
     //delete
     public function delete() {}
+
+    //menampilkan halaman form komentar
+    public function komentar() {
+        return view('pages.komentar-artikel');
+    }
+
+    //menyimpan data komentar yang dikirim lewat form
+    public function kirimKomentar(Request $request) {
+
+        $nama = $request->input('nama');
+        $judul_artikel = $request->input('judul_artikel');
+        $komentar = $request->input('komentar');
+
+        $data = [
+            'nama' => $nama,
+            'judul_artikel' => $judul_artikel,
+            'komentar' => $komentar,
+        ];
+
+        return view('pages.hasil-komentar', ['data' => $data]);
+    }
 
 }

@@ -15,4 +15,13 @@ Route::get('/tentang', [TentangController::class, 'index']);
 
 // routing untuk crud artikel
 Route::get('/artikel', [ArtikelController::class, 'index']);
+
+Route::get('/artikel/tambah', [ArtikelController::class, 'create']);
+Route::post('/artikel', [ArtikelController::class, 'store']);
+
+// routing untuk form komentar artikel
+// diletakkan sebelum /artikel/{id} agar "komentar" tidak dianggap sebagai {id}
+Route::get('/artikel/komentar', [ArtikelController::class, 'komentar']);
+Route::post('/artikel/komentar', [ArtikelController::class, 'kirimKomentar']);
+
 Route::get('/artikel/{id}', [ArtikelController::class, 'show']);

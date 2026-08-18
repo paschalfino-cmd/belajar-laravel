@@ -19,6 +19,8 @@
             <li><a href="/kontak">Kontak</a></li>
             <li><a href="/tentang">Tentang</a></li>
             <li><a href="/artikel">Artikel</a></li>
+            <li><a href="/artikel/tambah">Tambah Artikel</a></li>
+            <li><a href="/artikel/komentar">Artikel Komentar</a></li>
         </ul>
     </header>
 
